@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet" >
+        <!-- <script src="js/"></script> -->
+        <script src="js/jquery-3.3.1.min.js" ></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/install.js"></script>
+        
+    </head>
+    <body>
+        <div class="container border mt-3">
+            <div class="alert mt-3" id="alert-danger" style="display: none"></div>
+            <div class="form-group mt-3">
+                <label for="address">MongoDB Address</label>
+                <input type="url" class="form-control" id="address" aria-describedby="addressHelp" placeholder="Enter MongoDB Address">
+                <small id="addressHelp" class="form-text text-muted">If you are running the database on the same machine you're running this app, use localhost</small>
+            </div>
+            <div class="form-group">
+                <label for="port">DataBase Port</label>
+                <input type="number" class="form-control" id="port" aria-describedby="portHelp" placeholder="Enter MongoDB Port">
+                <small id="portHelp" class="form-text text-muted">Port of the Mongo Database</small>
+            </div>
+            <div class="form-group">
+                <label for="user">MongoDB User</label>
+                <input type="text" class="form-control" id="user" aria-describedby="userHelp" placeholder="Enter MongoDB User">
+                <small id="userHelp" class="form-text text-muted">MongoDB user. Possibly a user that can only create Collections</small>
+            </div>
+            <div class="form-group">
+                <label for="password">MongoDB password</label>
+                <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter MongoDB Password">
+                <small id="passwordHelp" class="form-text text-muted">Password for MongoDB. If you are using external database make sure you're securely connected</small>
+            </div>
+            <div class="form-group">
+                <label for="root-user">App User</label>
+                <input type="text" class="form-control" id="root-user" aria-describedby="root-userHelp" placeholder="Enter Root-Admin User">
+                <small id="root-userHelp" class="form-text text-muted">App Root User. This is the owner of the app</small>
+            </div>
+            <div class="form-group">
+                <label for="root-password">App-User password</label>
+                <input type="password" class="form-control" id="root-password" aria-describedby="root-passwordHelp" placeholder="Enter Root-Admin Password">
+                <small id="root-passwordHelp" class="form-text text-muted">App Root User password. This is the owner of the app</small>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" onclick="presetUp()">Submit</button>
+
+        </div>
+    </body>
+</html>
